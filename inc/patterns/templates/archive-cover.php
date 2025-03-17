@@ -12,7 +12,7 @@
  * keywords: archive, posts, cover
  */
 
- return array(
+return array(
 	'title'      => __( 'Archive Cover', 'nonprofit-fse' ),
 	'categories' => array( 'nonprofit-fse-layouts' ),
 	'keywords'   => array( 'archive', 'posts', 'cover' ),

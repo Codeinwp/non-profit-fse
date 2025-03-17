@@ -11,6 +11,7 @@
  * categories: nonprofit-fse
  * keywords: hero, cover
  */
+
 use NonprofitFSE\Assets_Manager;
 
 $img02 = Assets_Manager::get_image_url( 'non-profit-02.webp' );

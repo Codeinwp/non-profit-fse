@@ -11,6 +11,7 @@
  * categories: nonprofit-fse
  * keywords: features, columns
  */
+
 use NonprofitFSE\Assets_Manager;
 
 $img03 = Assets_Manager::get_image_url( 'non-profit-03.webp' );

@@ -15,10 +15,10 @@
 use NonprofitFSE\Assets_Manager;
 
 return array(
-    'title' => __( 'stats', 'nonprofit-fse' ),
-    'categories' => array( 'nonprofit-fse' ),
-    'keywords' => array( 'stats', 'numbers' ),
-    'content' => '<!-- wp:group {"metadata":{"name":"stats"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
+	'title'      => __( 'stats', 'nonprofit-fse' ),
+	'categories' => array( 'nonprofit-fse' ),
+	'keywords'   => array( 'stats', 'numbers' ),
+	'content'    => '<!-- wp:group {"metadata":{"name":"stats"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-bg-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"var:preset|spacing|30"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"","style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"top":"0","bottom":"0","left":"var:preset|spacing|50","right":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-column" style="padding-top:0;padding-right:var(--wp--preset--spacing--60);padding-bottom:0;padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"fontSize":"huge"} -->

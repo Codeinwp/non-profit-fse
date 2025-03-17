@@ -15,10 +15,10 @@
 use NonprofitFSE\Assets_Manager;
 
 return array(
-    'title'      => __( 'Testimonials 2', 'nonprofit-fse' ),
-    'categories' => array( 'nonprofit-fse' ),
-    'keywords'   => array( 'Testimonials', 'review' ),
-    'content'    => '<!-- wp:group {"metadata":{"name":"testimonials 2"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg-alt","textColor":"ti-fg","layout":{"type":"constrained"}} -->
+	'title'      => __( 'Testimonials 2', 'nonprofit-fse' ),
+	'categories' => array( 'nonprofit-fse' ),
+	'keywords'   => array( 'Testimonials', 'review' ),
+	'content'    => '<!-- wp:group {"metadata":{"name":"testimonials 2"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg-alt","textColor":"ti-fg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-color has-ti-bg-alt-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"66.66%"} -->
 <div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:heading {"textAlign":"left"} -->

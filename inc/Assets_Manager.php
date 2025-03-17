@@ -16,9 +16,9 @@ namespace NonprofitFSE;
  */
 class Assets_Manager {
 	const ASSETS_SLUGS = array(
-		'frontend-css'       => 'nonprofit-fse-style',
-		'editor-css'         => 'nonprofit-fse-editor',
-		'welcome-notice'     => 'nonprofit-fse-welcome-notice',
+		'frontend-css'   => 'nonprofit-fse-style',
+		'editor-css'     => 'nonprofit-fse-editor',
+		'welcome-notice' => 'nonprofit-fse-welcome-notice',
 	);
 
 	const AVAILABLE_THEME_FONTS = array(

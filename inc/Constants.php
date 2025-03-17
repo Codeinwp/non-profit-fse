@@ -16,7 +16,7 @@ namespace NonprofitFSE;
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice'         => 'nonprofit-fse-welcome-notice-dismissed',
+		'dismissed-welcome-notice' => 'nonprofit-fse-welcome-notice-dismissed',
 	);
 
 	const PRODUCT_KEY = 'nonprofit_fse';
