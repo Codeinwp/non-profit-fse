@@ -15,7 +15,7 @@ jobs:
       git-sha-8: ${{ steps.retrieve-git-sha-8.outputs.sha8 }}
     steps:
       - name: Check out source files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup node 16
         uses: actions/setup-node@v1
         with:
@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "::set-output name=dir::$(composer config cache-files-dir)"
       - name: Configure Composer cache
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}

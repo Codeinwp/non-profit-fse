@@ -12,7 +12,7 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - name: Build files using ${{ matrix.node-version }}
@@ -22,7 +22,7 @@ jobs:
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
