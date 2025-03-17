@@ -1,19 +1,21 @@
-
 <?php
 /**
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package nonprofit-fse
  * @since 1.0.0
  *
  * slug: content-4
  * title: Content 4
- * categories: NeveFSE
+ * categories: nonprofit-fse
  * keywords: content
  */
-
-<!-- wp:group {"metadata":{"name":"content 4"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-accent","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
+return array(
+    'title'      => __( 'Content 4', 'nonprofit-fse' ),
+    'categories' => array( 'nonprofit-fse' ),
+    'keywords'   => array( 'content' ),
+    'content'    => '<!-- wp:group {"metadata":{"name":"content 4"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-accent","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-alt-color has-ti-accent-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:image {"id":211,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"left":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":{},"right":{},"bottom":{}}}} -->
@@ -23,7 +25,7 @@
 
 <!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:heading -->
-<h2 class="wp-block-heading">From Abandoned to Adored: Luna’s Journey</h2>
+<h2 class="wp-block-heading">From Abandoned to Adored: Luna\'s Journey</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->

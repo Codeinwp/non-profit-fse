@@ -1,19 +1,24 @@
-
 <?php
 /**
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package nonprofit-fse
  * @since 1.0.0
  *
  * slug: testimonials
  * title: Testimonials
- * categories: NeveFSE
+ * categories: nonprofit-fse
  * keywords: Testimonials, review
  */
 
-<!-- wp:group {"metadata":{"name":"testimonials"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|80"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg","textColor":"ti-fg","layout":{"type":"constrained"}} -->
+use NonprofitFSE\Assets_Manager;
+
+return array(
+	'title'      => __( 'Testimonials', 'nonprofit-fse' ),
+	'categories' => array( 'nonprofit-fse' ),
+	'keywords'   => array( 'Testimonials', 'review' ),
+	'content'    => '<!-- wp:group {"metadata":{"name":"testimonials"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|80"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg","textColor":"ti-fg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-color has-ti-bg-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center","fontSize":"huge"} -->
 <h2 class="wp-block-heading has-text-align-center has-huge-font-size">Testimonial Section Title</h2>
 <!-- /wp:heading -->
@@ -51,6 +56,5 @@
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group -->
-    ',
+<!-- /wp:group -->',
 );

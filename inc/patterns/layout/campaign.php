@@ -1,18 +1,24 @@
-
 <?php
 /**
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package nonprofit-fse
  * @since 1.0.0
  *
  * slug: campaigns
  * title: Campaigns
- * categories: NeveFSE
+ * categories: nonprofit-fse
  * keywords: campaigns, content, columns
  */
 
+use NonprofitFSE\Assets_Manager;
+
+return array(
+    'title'      => __( 'Campaigns', 'nonprofit-fse' ),
+    'categories' => array( 'nonprofit-fse' ),
+    'keywords'   => array( 'campaigns', 'content', 'columns' ),
+    'content'    => '
 <!-- wp:group {"metadata":{"name":"campaigns"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg-alt","textColor":"ti-fg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-color has-ti-bg-alt-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"66.66%"} -->

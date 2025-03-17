@@ -3,16 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package nonprofit-fse
  * @since 1.0.0
  *
  * slug: single-post-cover
  * title: Single Post 3 (Cover)
- * categories: NeveFSE
+ * categories: nonprofit-fse
  * keywords: single, post, cover
  */
 
-<!-- wp:group {"tagName":"main","metadata":{"categories":["neve-fse-layouts"],"patternName":"neve-fse/templates/single-post-cover","name":"Single Post 3 (Cover)"},"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->
+return array(
+	'title'      => __( 'Single Post 3 (Cover)', 'nonprofit-fse' ),
+	'categories' => array( 'nonprofit-fse-layouts' ),
+	'keywords'   => array( 'single', 'post', 'cover' ),
+	'content'    => '<!-- wp:group {"tagName":"main","metadata":{"categories":["nonprofit-fse-layouts"],"patternName":"nonprofit-fse/templates/single-post-cover","name":"Single Post 3 (Cover)"},"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->
 <main class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"><!-- wp:cover {"useFeaturedImage":true,"dimRatio":80,"overlayColor":"ti-bg-inv","isUserOverlayColor":true,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><span aria-hidden="true" class="wp-block-cover__background has-ti-bg-inv-background-color has-background-dim-80 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
@@ -70,6 +74,5 @@
 <!-- /wp:comments-pagination --></div>
 <!-- /wp:comments --></div>
 <!-- /wp:group --></main>
-<!-- /wp:group -->
-	',
+<!-- /wp:group -->',
 );

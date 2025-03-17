@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package nonprofit-fse
  * @since 1.0.0
  *
  * slug: page-title-3
  * title: Page Title - Light
- * categories: NeveFSE
+ * categories: nonprofit-fse
  * keywords: Page Title, Post title, background, light
  */
 
 return array(
-	'title'      => __( 'Page Title - Light', 'neve-fse' ),
-	'categories' => array( 'neve-fse', 'posts' ),
+	'title'      => __( 'Page Title - Light', 'nonprofit-fse' ),
+	'categories' => array( 'nonprofit-fse', 'posts' ),
 	'keywords'   => array( 'Page Title', 'Post title', 'background', 'light' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"8px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

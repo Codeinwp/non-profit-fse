@@ -44,7 +44,7 @@ jobs:
           GIT_COMMITTER_NAME: themeisle[bot]
           GIT_COMMITTER_EMAIL: ${{ secrets.PIRATE_BOT_EMAIL }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_ANNOUNCEMENTS }}
-          SEMANTIC_RELEASE_PACKAGE: NeveFSE
+          SEMANTIC_RELEASE_PACKAGE: NonprofitFSE
   empty-job:
     # if no jobs run, github action considers it a test failure -- which seems like a bug
     # this makes it so the top-level if statement for the job does not give status failure.

@@ -1,19 +1,22 @@
-
 <?php
 /**
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package nonprofit-fse
  * @since 1.0.0
  *
  * slug: events
  * title: Events
- * categories: NeveFSE
+ * categories: nonprofit-fse
  * keywords: events, features, rows
  */
 
-<!-- wp:group {"metadata":{"name":"events"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-accent","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
+return array(
+    'title'      => __( 'Events', 'nonprofit-fse' ),
+    'categories' => array( 'nonprofit-fse' ),
+    'keywords'   => array( 'events', 'features', 'rows' ),
+    'content'    => '<!-- wp:group {"metadata":{"name":"events"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-accent","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-alt-color has-ti-accent-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"left"} -->
 <h2 class="wp-block-heading has-text-align-left">Upcoming Events</h2>
@@ -107,6 +110,5 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
-<!-- /wp:group -->
-    ',
+<!-- /wp:group -->',
 );
