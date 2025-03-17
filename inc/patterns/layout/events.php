@@ -11,6 +11,11 @@
  * categories: nonprofit-fse
  * keywords: events, features, rows
  */
+use NonprofitFSE\Assets_Manager;
+
+$img06 = Assets_Manager::get_image_url( 'non-profit-06.webp' );
+$img07 = Assets_Manager::get_image_url( 'non-profit-07.webp' );
+$img09 = Assets_Manager::get_image_url( 'non-profit-09.webp' );
 
 return array(
     'title'      => __( 'Events', 'nonprofit-fse' ),
@@ -30,7 +35,7 @@ return array(
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg","textColor":"ti-fg"} -->
 <div class="wp-block-columns has-ti-fg-color has-ti-bg-background-color has-text-color has-background has-link-color" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:image {"id":211,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"left":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":[],"right":[],"bottom":[]}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-06.webp" alt="" class="wp-image-211" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img06 ) . '" alt="" class="wp-image-211" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -58,7 +63,7 @@ return array(
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg","textColor":"ti-fg"} -->
 <div class="wp-block-columns has-ti-fg-color has-ti-bg-background-color has-text-color has-background has-link-color" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:image {"id":212,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"left":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":[],"right":[],"bottom":[]}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-07.webp" alt="" class="wp-image-212" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img06 ) . '" alt="" class="wp-image-212" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -86,7 +91,7 @@ return array(
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg","textColor":"ti-fg"} -->
 <div class="wp-block-columns has-ti-fg-color has-ti-bg-background-color has-text-color has-background has-link-color" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:image {"id":214,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"left":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":[],"right":[],"bottom":[]}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-09.webp" alt="" class="wp-image-214" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img06 ) . '" alt="" class="wp-image-214" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

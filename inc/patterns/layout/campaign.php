@@ -11,8 +11,9 @@
  * categories: nonprofit-fse
  * keywords: campaigns, content, columns
  */
-
 use NonprofitFSE\Assets_Manager;
+
+$img02 = Assets_Manager::get_image_url( 'non-profit-02.webp' );
 
 return array(
     'title'      => __( 'Campaigns', 'nonprofit-fse' ),
@@ -35,7 +36,7 @@ return array(
 <!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":{"left":"0"}}},"backgroundColor":"ti-bg"} -->
 <div class="wp-block-columns alignwide has-ti-bg-background-color has-background" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"width":""} -->
 <div class="wp-block-column"><!-- wp:image {"id":207,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"spacing":{"margin":{"top":"0px","left":"0px","bottom":"0px","right":"0px"}},"border":{"left":{"width":"0px","style":"none"},"top":{},"right":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"bottom":{}}}} -->
-<figure class="wp-block-image size-full has-custom-border" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-02.webp" alt="" class="wp-image-207" style="border-right-color:var(--wp--preset--color--ti-accent-secondary);border-right-width:16px;border-left-style:none;border-left-width:0px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px"><img src="' . esc_url( $img02 ) . '" alt="" class="wp-image-207" style="border-right-color:var(--wp--preset--color--ti-accent-secondary);border-right-width:16px;border-left-style:none;border-left-width:0px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

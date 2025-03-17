@@ -11,6 +11,11 @@
  * categories: nonprofit-fse
  * keywords: content
  */
+use NonprofitFSE\Assets_Manager;
+
+$img03 = Assets_Manager::get_image_url( 'non-profit-03.webp' );
+$img06 = Assets_Manager::get_image_url( 'non-profit-06.webp' );
+
 return array(
     'title'      => __( 'Content 4', 'nonprofit-fse' ),
     'categories' => array( 'nonprofit-fse' ),
@@ -19,7 +24,7 @@ return array(
 <div class="wp-block-group alignfull has-ti-fg-alt-color has-ti-accent-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:image {"id":211,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"left":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":{},"right":{},"bottom":{}}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-06.webp" alt="" class="wp-image-211" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img06 ) . '" alt="" class="wp-image-211" style="border-left-color:var(--wp--preset--color--ti-accent-secondary);border-left-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -57,7 +62,7 @@ return array(
 
 <!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:image {"id":208,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"right":{"color":"var:preset|color|ti-accent","width":"16px"},"top":{},"bottom":{},"left":{}}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-03.webp" alt="" class="wp-image-208" style="border-right-color:var(--wp--preset--color--ti-accent);border-right-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img03 ) . '" alt="" class="wp-image-208" style="border-right-color:var(--wp--preset--color--ti-accent);border-right-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

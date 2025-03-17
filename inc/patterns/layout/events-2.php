@@ -11,6 +11,10 @@
  * categories: nonprofit-fse
  * keywords: events, features, columns
  */
+use NonprofitFSE\Assets_Manager;
+
+$img05 = Assets_Manager::get_image_url( 'non-profit-05.webp' );
+$img06 = Assets_Manager::get_image_url( 'non-profit-06.webp' );
 
 return array(
     'title'      => __( 'Events 2', 'nonprofit-fse' ),
@@ -30,7 +34,7 @@ return array(
 <!-- wp:group {"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":211,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"bottom":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":[],"right":[],"left":[]}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-06.webp" alt="" class="wp-image-211" style="border-bottom-color:var(--wp--preset--color--ti-accent-secondary);border-bottom-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img06 ) . '" alt="" class="wp-image-211" style="border-bottom-color:var(--wp--preset--color--ti-accent-secondary);border-bottom-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
@@ -56,7 +60,7 @@ return array(
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":210,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"bottom":{"color":"var:preset|color|ti-accent-secondary","width":"16px"},"top":[],"right":[],"left":[]}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://nonprofit.instawp.xyz/wp-content/uploads/2025/02/non-profit-05.webp" alt="" class="wp-image-210" style="border-bottom-color:var(--wp--preset--color--ti-accent-secondary);border-bottom-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $img05 ) . '" alt="" class="wp-image-210" style="border-bottom-color:var(--wp--preset--color--ti-accent-secondary);border-bottom-width:16px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
