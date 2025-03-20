@@ -1,7 +1,7 @@
 @custom-media --tablet (max-width: 769px);
 @custom-media --desktop (max-width: 1200px);
 
-.neve-fse-welcome-notice {
+.nonprofit-fse-welcome-notice {
 	position: relative;
 	padding-bottom: 0;
 
@@ -99,38 +99,3 @@
 		//position: absolute;
 	}
 }
-
-.neve-fse-survey-notice {
-
-	.notice-content {
-		display: flex;
-		gap: 12px;
-		align-items: flex-start;
-
-		.neve-fse-logo {
-			width: 64px;
-			min-width: 64px;
-			margin-top: 12px;
-		}
-
-		.description {
-			font-size: 15px;
-			line-height: 1.6;
-			margin-bottom: 12px;
-		}
-
-		.notice-copy .actions {
-			display: flex;
-			gap: 12px;
-			margin-bottom: 12px;
-
-			.button-hero {
-
-				.dashicons-external {
-					line-height: 42px;
-				}
-			}
-		}
-	}
-}
-

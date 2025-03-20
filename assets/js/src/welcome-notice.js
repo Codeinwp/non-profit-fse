@@ -1,4 +1,4 @@
-/* global neveFSEData, jQuery */
+/* global nonprofitFSEData, jQuery */
 
 import { installPlugin, activatePlugin } from './common/plugin-install';
 
@@ -13,11 +13,13 @@ function handleWelcomeNotice( $ ) {
 		nonce,
 		otterRefNonce,
 		otterStatus,
-	} = neveFSEData;
+	} = nonprofitFSEData;
 
-	const installBtn = $( '.neve-fse-welcome-notice #neve-fse-install-otter' );
-	const dismissBtn = $( '.neve-fse-welcome-notice .notice-dismiss' );
-	const notice = $( '.neve-fse-welcome-notice' );
+	const installBtn = $(
+		'.nonprofit-fse-welcome-notice #nonprofit-fse-install-otter'
+	);
+	const dismissBtn = $( '.nonprofit-fse-welcome-notice .notice-dismiss' );
+	const notice = $( '.nonprofit-fse-welcome-notice' );
 	const installText = installBtn.find( '.text' );
 	const installSpinner = installBtn.find( '.dashicons' );
 
@@ -35,7 +37,7 @@ function handleWelcomeNotice( $ ) {
 
 		await $.post( ajaxUrl, {
 			nonce: otterRefNonce,
-			action: 'neve_fse_set_otter_ref',
+			action: 'nonprofit_fse_set_otter_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
@@ -67,7 +69,7 @@ function handleWelcomeNotice( $ ) {
 	$( dismissBtn ).on( 'click', () => {
 		$.post( ajaxUrl, {
 			nonce,
-			action: 'neve_fse_dismiss_welcome_notice',
+			action: 'nonprofit_fse_dismiss_welcome_notice',
 			success: hideAndRemoveNotice,
 		} );
 	} );
