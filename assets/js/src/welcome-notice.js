@@ -8,15 +8,15 @@ function handleWelcomeNotice( $ ) {
 		installing,
 		done,
 		activationUrl,
-		onboardingUrl,
+		redirectUrl,
 		ajaxUrl,
 		nonce,
-		otterRefNonce,
-		otterStatus,
+		wpfpRefNonce,
+		wpfpStatus,
 	} = nonprofitFSEData;
 
 	const installBtn = $(
-		'.nonprofit-fse-welcome-notice #nonprofit-fse-install-otter'
+		'.nonprofit-fse-welcome-notice #nonprofit-fse-install-wpfp'
 	);
 	const dismissBtn = $( '.nonprofit-fse-welcome-notice .notice-dismiss' );
 	const notice = $( '.nonprofit-fse-welcome-notice' );
@@ -31,39 +31,38 @@ function handleWelcomeNotice( $ ) {
 		} );
 	};
 
-	const activateOtter = async () => {
+	const activateWpfp = async () => {
 		installText.text( activating );
 		await activatePlugin( activationUrl );
 
 		await $.post( ajaxUrl, {
-			nonce: otterRefNonce,
-			action: 'nonprofit_fse_set_otter_ref',
+			nonce: wpfpRefNonce,
+			action: 'nonprofit_fse_set_wpfp_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
 		installSpinner.addClass( 'dashicons-yes' );
 		installText.text( done );
 		setTimeout( hideAndRemoveNotice, 1500 );
-		window.location.href = onboardingUrl;
+		window.location.replace( redirectUrl );
 	};
 
 	$( installBtn ).on( 'click', async () => {
 		installSpinner.removeClass( 'hidden' );
 		installBtn.attr( 'disabled', true );
 
-		if ( otterStatus === 'active' ) {
-			window.location.href = onboardingUrl;
+		if ( wpfpStatus === 'active' ) {
 			return;
 		}
 
-		if ( otterStatus === 'installed' ) {
-			await activateOtter();
+		if ( wpfpStatus === 'installed' ) {
+			await activateWpfp();
 			return;
 		}
 
 		installText.text( installing );
-		await installPlugin( 'otter-blocks' );
-		await activateOtter();
+		await installPlugin( 'wp-full-stripe-free' );
+		await activateWpfp();
 	} );
 
 	$( dismissBtn ).on( 'click', () => {

@@ -15,11 +15,11 @@ namespace NonprofitFSE;
 class Admin {
 
 	/**
-	 * Otter reference key.
+	 * WP Full Pay reference key.
 	 *
 	 * @var string
 	 */
-	const OTTER_REF = 'otter_reference_key';
+	const WPFP_REF = 'wpfp_reference_key';
 
 	/**
 	 * Admin constructor.
@@ -52,8 +52,9 @@ class Admin {
 	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 
-		add_action( 'activated_plugin', array( $this, 'after_otter_activation' ) );
-		add_action( 'wp_ajax_nonprofit_fse_set_otter_ref', array( $this, 'set_otter_ref' ) );
+		add_action( 'activated_plugin', array( $this, 'after_wpfs_activation' ) );
+		add_action( 'wp_ajax_nonprofit_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
+		add_action( 'wp_ajax_nonprofit_fse_set_wpfp_ref', array( $this, 'set_wpfp_ref' ) );
 	}
 
 	/**
@@ -66,7 +67,7 @@ class Admin {
 			return;
 		}
 
-		$otter_status = $this->get_otter_status();
+		$wpfp_status = $this->get_wpfp_status();
 
 		Assets_Manager::enqueue_style( Assets_Manager::ASSETS_SLUGS['welcome-notice'], 'welcome-notice' );
 		Assets_Manager::enqueue_script(
@@ -76,28 +77,22 @@ class Admin {
 			array(),
 			array(
 				'nonce'         => wp_create_nonce( 'nonprofit-fse-dismiss-welcome-notice' ),
+				'wpfpRefNonce'  => wp_create_nonce( 'nonprofit-fse-set-wpfp-ref' ),
 				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'otterStatus'   => $otter_status,
+				'wpfpStatus'    => $wpfp_status,
 				'activationUrl' => esc_url(
 					add_query_arg(
 						array(
 							'plugin_status' => 'all',
 							'paged'         => '1',
 							'action'        => 'activate',
-							'plugin'        => rawurlencode( 'otter-blocks/otter-blocks.php' ),
-							'_wpnonce'      => wp_create_nonce( 'activate-plugin_otter-blocks/otter-blocks.php' ),
+							'plugin'        => rawurlencode( 'wp-full-stripe-free/wp-full-stripe.php' ),
+							'_wpnonce'      => wp_create_nonce( 'activate-plugin_wp-full-stripe-free/wp-full-stripe.php' ),
 						),
 						admin_url( 'plugins.php' )
 					)
 				),
-				'onboardingUrl' => esc_url(
-					add_query_arg(
-						array(
-							'onboarding' => 'true',
-						),
-						admin_url( 'site-editor.php' )
-					) 
-				),
+				'redirectUrl'   => esc_url( admin_url( 'admin.php?page=wpfs-settings-stripe&onboarding=true' ) ),
 				'activating'    => __( 'Activating', 'nonprofit-fse' ) . '&hellip;',
 				'installing'    => __( 'Installing', 'nonprofit-fse' ) . '&hellip;',
 				'done'          => __( 'Done', 'nonprofit-fse' ),
@@ -108,33 +103,39 @@ class Admin {
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
-		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'Otter Blocks preview', 'nonprofit-fse' ) . '"/>';
-
 		$notice_html .= '<div class="notice-copy">';
 
+		$notice_html .= '<h2 class="notice-subtitle">';
+		$notice_html .= '<span class="dashicons dashicons-star-filled"></span>';
+		/* translators: %s: 🎉 emoji */
+		$notice_html .= sprintf( __( 'Accept Donations on Your Non-Profit Site %s', 'nonprofit-fse' ), '🎉' );
+		$notice_html .= '</h2>';
+
 		$notice_html .= '<h1 class="notice-title">';
-		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Power up your website building experience with %s!', 'nonprofit-fse' ), '<span>Otter Blocks</span>' );
+		/* translators: %s: WP Full Pay */
+		$notice_html .= sprintf( __( 'Start Collecting Funds with %s!', 'nonprofit-fse' ), '<span>WP Full Pay</span>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds extra functionality to the WordPress Block Editor (also known as Gutenberg) for a better page building experience without the need for traditional page builders.', 'nonprofit-fse' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'The simplest way to accept donations and payments on your WordPress site. Set up in minutes with no technical knowledge required.', 'nonprofit-fse' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Quick setup', 'nonprofit-fse' ) . '</strong> - ' . __( 'Connect to Stripe and create your first donation form in minutes', 'nonprofit-fse' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Multiple payment options', 'nonprofit-fse' ) . '</strong> - ' . __( 'One-time and recurring donations with customizable amounts', 'nonprofit-fse' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
-		/* translators: %s: Otter Blocks */
-		$notice_html .= '<button id="nonprofit-fse-install-otter" class="button button-primary button-hero">';
+		/* translators: %s: WP Full Pay */
+		$notice_html .= '<button id="nonprofit-fse-install-wpfp" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
-		$notice_html .= 'installed' === $otter_status ?
-			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Activate %s', 'nonprofit-fse' ), 'Otter Blocks' ) :
-			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Install & Activate %s', 'nonprofit-fse' ), 'Otter Blocks' );
+		$notice_html .= 'installed' === $wpfp_status ?
+			/* translators: %s: WP Full Pay */
+			sprintf( __( 'Activate %s', 'nonprofit-fse' ), 'WP Full Pay' ) :
+			/* translators: %s: WP Full Pay */
+			sprintf( __( 'Install & Activate %s', 'nonprofit-fse' ), 'WP Full Pay' );
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
 
-		$notice_html .= '<a href="https://wordpress.org/plugins/otter-blocks/" target="_blank" class="button button-secondary button-hero">';
+		$notice_html .= '<a href="https://wordpress.org/plugins/wp-full-stripe-free/" target="_blank" class="button button-secondary button-hero">';
 		$notice_html .= '<span>' . __( 'Learn More', 'nonprofit-fse' ) . '</span>';
 		$notice_html .= '<span class="dashicons dashicons-external"></span>';
 		$notice_html .= '</a>';
@@ -142,6 +143,8 @@ class Admin {
 		$notice_html .= '</div>';
 
 		$notice_html .= '</div>';
+
+		$notice_html .= '<img class="wpfp-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'WP Full Pay preview', 'nonprofit-fse' ) . '"/>';
 		$notice_html .= '</div>';
 		$notice_html .= '</div>';
 
@@ -171,8 +174,8 @@ class Admin {
 	 * @return bool
 	 */
 	private function should_show_welcome_notice(): bool {
-		// Already using Otter.
-		if ( is_plugin_active( 'otter-blocks/otter-blocks.php' ) ) {
+		// Already using WPFP.
+		if ( is_plugin_active( 'wp-full-stripe-free/wp-full-stripe.php' ) ) {
 			return false;
 		}
 
@@ -226,18 +229,18 @@ class Admin {
 	}
 
 	/**
-	 * Get the Otter Blocks plugin status.
+	 * Get the WP Full Pay plugin status.
 	 *
 	 * @return string
 	 */
-	private function get_otter_status(): string {
+	private function get_wpfp_status(): string {
 		$status = 'not-installed';
 
-		if ( is_plugin_active( 'otter-blocks/otter-blocks.php' ) ) {
+		if ( is_plugin_active( 'wp-full-stripe-free/wp-full-stripe.php' ) ) {
 			return 'active';
 		}
 
-		if ( file_exists( ABSPATH . 'wp-content/plugins/otter-blocks/otter-blocks.php' ) ) {
+		if ( file_exists( ABSPATH . 'wp-content/plugins/wp-full-stripe-free/wp-full-stripe.php' ) ) {
 			return 'installed';
 		}
 
@@ -245,58 +248,32 @@ class Admin {
 	}
 
 	/**
-	 * Run after Otter Blocks activation.
+	 * Run after WP Full Pay activation.
 	 *
 	 * @param string $plugin Plugin name.
 	 *
 	 * @return void
 	 */
-	public function after_otter_activation( $plugin ) {
-		if ( 'otter-blocks/otter-blocks.php' !== $plugin ) {
+	public function after_wpfs_activation( $plugin ) {
+		if ( 'wp-full-stripe-free/wp-full-stripe.php' !== $plugin ) {
 			return;
 		}
 
-		if ( ! class_exists( '\ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding' ) ) {
-			return;
-		}
-
-		$status = get_option( \ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding::OPTION_KEY, array() );
-		$slug   = get_stylesheet();
-
-		if ( ! empty( $status[ $slug ] ) ) {
-			return;
-		}
-
-		// Dismiss after two days from activation.
-		$activated_time = get_option( 'nonprofit_fse_install' );
-
-		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > ( 2 * DAY_IN_SECONDS ) ) {
-			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
-			return;
-		}
-
-		$onboarding = add_query_arg(
-			array(
-				'onboarding' => 'true',
-			),
-			admin_url( 'site-editor.php' )
-		);
-
-		wp_safe_redirect( $onboarding );
+		update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
 		exit;
 	}
 
 	/**
-	 * Update Otter reference key.
+	 * Update WP Full Pay reference key.
 	 *
 	 * @return void
 	 */
-	public function set_otter_ref() {
-		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'nonprofit-fse-set-otter-ref' ) ) {
+	public function set_wpfp_ref() {
+		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'nonprofit-fse-set-wpfp-ref' ) ) {
 			return;
 		}
 
-		update_option( self::OTTER_REF, 'nonprofit-fse' );
+		update_option( self::WPFP_REF, 'nonprofit-fse' );
 
 		wp_send_json_success();
 	}
