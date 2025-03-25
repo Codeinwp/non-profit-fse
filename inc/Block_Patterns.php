@@ -60,11 +60,11 @@ class Block_Patterns {
 	private function setup_properties() {
 		$categories = array(
 			'nonprofit-fse'         => array(
-				'label'       => __( 'Nonprofit FSE Patterns', 'nonprofit-fse' ),
+				'label'       => __( 'Non Profit FSE Patterns', 'nonprofit-fse' ),
 				'description' => __( 'Patterns for several sections and components', 'nonprofit-fse' ),
 			),
 			'nonprofit-fse-layouts' => array(
-				'label'       => __( 'Nonprofit FSE Layouts', 'nonprofit-fse' ),
+				'label'       => __( 'Non Profit FSE Layouts', 'nonprofit-fse' ),
 				'description' => __( 'Full-page layouts that can be used as templates', 'nonprofit-fse' ),
 			),
 		);
