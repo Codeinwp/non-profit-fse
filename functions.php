@@ -50,7 +50,7 @@ function check_php() {
 		'php_version',
 		sprintf(
 		/* translators: %s message to upgrade PHP to the latest version */
-			__( "Hey, we've noticed that you're running an outdated version of PHP which is no longer supported. Make sure your site is fast and secure, by %1\$s. Nonprofit FSE's minimal requirement is PHP%2\$s.", 'nonprofit-fse' ),
+			__( "Hey, we've noticed that you're running an outdated version of PHP which is no longer supported. Make sure your site is fast and secure, by %1\$s. Non Profit FSE's minimal requirement is PHP%2\$s.", 'nonprofit-fse' ),
 			sprintf(
 			/* translators: %s message to upgrade PHP to the latest version */
 				'<a href="https://wordpress.org/support/upgrade-php/">%s</a>',
@@ -67,7 +67,7 @@ function check_php() {
  * @return void
  */
 function define_constants() {
-	define( 'NONPROFIT_FSE_VERSION', '1.1.2' );
+	define( 'NONPROFIT_FSE_VERSION', '1.0.0' );
 	define( 'NONPROFIT_FSE_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
 	define( 'NONPROFIT_FSE_DIR', trailingslashit( get_template_directory() ) );
 	define( 'NONPROFIT_FSE_URL', trailingslashit( get_template_directory_uri() ) );
@@ -102,7 +102,7 @@ function check_build_files() {
 			'build_missing',
 			sprintf(
 			/* translators: %s: commands to run the theme */
-				__( 'You appear to be running the Nonprofit FSE theme from source code. Please finish installation by running %s.', 'nonprofit-fse' ),
+				__( 'You appear to be running the Non Profit FSE theme from source code. Please finish installation by running %s.', 'nonprofit-fse' ),
 				'<code>composer install --no-dev &amp;&amp; yarn install --frozen-lockfile &amp;&amp; yarn run build</code>'
 			)
 		);

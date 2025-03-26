@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Majorelle Blue",
+  "title": "Funk Cloud",
   "version": 2,
   "settings": {
     "color": {
@@ -12,32 +12,32 @@
         },
         {
           "slug": "ti-fg",
-          "color": "#1F2023",
+          "color": "#000000",
           "name": "Foreground"
         },
         {
           "slug": "ti-accent",
-          "color": "#5E33D9",
+          "color": "#1F3BC9",
           "name": "Accent"
         },
         {
           "slug": "ti-accent-secondary",
-          "color": "#4F25C6",
+          "color": "#FFCA59",
           "name": "Accent Secondary"
         },
         {
           "slug": "ti-bg-inv",
-          "color": "#261E3C",
+          "color": "#1C2962",
           "name": "Background Dark"
         },
         {
           "slug": "ti-bg-alt",
-          "color": "#EEEBF5",
+          "color": "#F6F5F2",
           "name": "Background Alt"
         },
         {
           "slug": "ti-fg-alt",
-          "color": "#FFFFFA",
+          "color": "#FFFFFF",
           "name": "Foreground Alt"
         }
       ]
