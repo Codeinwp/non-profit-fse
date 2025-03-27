@@ -3,18 +3,18 @@
  * Patterns Handler.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 use WP_Block_Pattern_Categories_Registry;
 
 /**
  * Class Block_Patterns
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */
 class Block_Patterns {
 
@@ -59,13 +59,13 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'nonprofit-fse'         => array(
-				'label'       => __( 'Non Profit FSE Patterns', 'nonprofit-fse' ),
-				'description' => __( 'Patterns for several sections and components', 'nonprofit-fse' ),
+			'non-profit-fse'         => array(
+				'label'       => __( 'Non Profit FSE Patterns', 'non-profit-fse' ),
+				'description' => __( 'Patterns for several sections and components', 'non-profit-fse' ),
 			),
-			'nonprofit-fse-layouts' => array(
-				'label'       => __( 'Non Profit FSE Layouts', 'nonprofit-fse' ),
-				'description' => __( 'Full-page layouts that can be used as templates', 'nonprofit-fse' ),
+			'non-profit-fse-layouts' => array(
+				'label'       => __( 'Non Profit FSE Layouts', 'non-profit-fse' ),
+				'description' => __( 'Full-page layouts that can be used as templates', 'non-profit-fse' ),
 			),
 		);
 
@@ -77,6 +77,7 @@ class Block_Patterns {
 			'templates/archive-list',
 
 			// layout patterns.
+			'layout/404',
 			'layout/campaign',
 			'layout/content',
 			'layout/content-2',
@@ -104,8 +105,8 @@ class Block_Patterns {
 			'page_titles/page-title-4',
 		);
 
-		$this->categories = apply_filters( 'nonprofit_fse_block_patterns_categories', $categories );
-		$this->patterns   = apply_filters( 'nonprofit_fse_block_patterns', $patterns );
+		$this->categories = apply_filters( 'non_profit_fse_block_patterns_categories', $categories );
+		$this->patterns   = apply_filters( 'non_profit_fse_block_patterns', $patterns );
 	}
 
 	/**
@@ -130,13 +131,13 @@ class Block_Patterns {
 	 */
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
-			$file = NONPROFIT_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
+			$file = NON_PROFIT_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
 
 			if ( ! is_file( $file ) ) {
 				continue;
 			}
 
-			register_block_pattern( 'nonprofit-fse/' . $pattern, require $file );
+			register_block_pattern( 'non-profit-fse/' . $pattern, require $file );
 		}
 	}
 }

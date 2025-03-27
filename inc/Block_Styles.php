@@ -3,16 +3,16 @@
  * Block Styles Handler.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Block_Styles
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */
 class Block_Styles {
 	/**

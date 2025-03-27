@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: hero
  * title: Hero Cover
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: hero, cover
  */
 
-use NonprofitFSE\Assets_Manager;
+use NonProfitFSE\Assets_Manager;
 
 $img02 = Assets_Manager::get_image_url( 'non-profit-02.webp' );
 
 return array(
-	'title'      => __( 'Hero Cover', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse' ),
+	'title'      => __( 'Hero Cover', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse' ),
 	'keywords'   => array( 'hero', 'cover' ),
 	'content'    => '<!-- wp:group {"metadata":{"name":"hero"},"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"' . esc_url( $img02 ) . '","id":207,"dimRatio":40,"overlayColor":"black","isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"textColor":"ti-fg-alt","layout":{"type":"constrained","wideSize":"1140px"}} -->

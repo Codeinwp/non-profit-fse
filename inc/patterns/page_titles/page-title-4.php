@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: page-title-4
  * title: Page Title - Cover
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: Page Title, Post title, background, cover
  */
 
-use NonprofitFSE\Assets_Manager;
+use NonProfitFSE\Assets_Manager;
 
-$cover_image = Assets_Manager::get_image_url( 'nonprofit-fse-img04.jpg' );
+$cover_image = Assets_Manager::get_image_url( 'non-profit-fse-img04.jpg' );
 
 return array(
-	'title'      => __( 'Page Title - Cover', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse', 'posts' ),
+	'title'      => __( 'Page Title - Cover', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse', 'posts' ),
 	'keywords'   => array( 'Page Title', 'Post title', 'background', 'cover' ),
 	'content'    => '
 <!-- wp:cover {"url":"' . esc_url( $cover_image ) . '","dimRatio":70,"overlayColor":"ti-bg-inv","minHeight":200,"contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"64px","right":"32px","bottom":"64px","left":"32px"}}}} -->

@@ -1,4 +1,4 @@
-/* global nonprofitFSEData, jQuery */
+/* global nonProfitFSEData, jQuery */
 
 import { installPlugin, activatePlugin } from './common/plugin-install';
 
@@ -13,13 +13,13 @@ function handleWelcomeNotice( $ ) {
 		nonce,
 		wpfpRefNonce,
 		wpfpStatus,
-	} = nonprofitFSEData;
+	} = nonProfitFSEData;
 
 	const installBtn = $(
-		'.nonprofit-fse-welcome-notice #nonprofit-fse-install-wpfp'
+		'.non-profit-fse-welcome-notice #non-profit-fse-install-wpfp'
 	);
-	const dismissBtn = $( '.nonprofit-fse-welcome-notice .notice-dismiss' );
-	const notice = $( '.nonprofit-fse-welcome-notice' );
+	const dismissBtn = $( '.non-profit-fse-welcome-notice .notice-dismiss' );
+	const notice = $( '.non-profit-fse-welcome-notice' );
 	const installText = installBtn.find( '.text' );
 	const installSpinner = installBtn.find( '.dashicons' );
 
@@ -37,7 +37,7 @@ function handleWelcomeNotice( $ ) {
 
 		await $.post( ajaxUrl, {
 			nonce: wpfpRefNonce,
-			action: 'nonprofit_fse_set_wpfp_ref',
+			action: 'non_profit_fse_set_wpfp_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
@@ -68,7 +68,7 @@ function handleWelcomeNotice( $ ) {
 	$( dismissBtn ).on( 'click', () => {
 		$.post( ajaxUrl, {
 			nonce,
-			action: 'nonprofit_fse_dismiss_welcome_notice',
+			action: 'non_profit_fse_dismiss_welcome_notice',
 			success: hideAndRemoveNotice,
 		} );
 	} );

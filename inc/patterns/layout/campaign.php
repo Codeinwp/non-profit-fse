@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: campaigns
  * title: Campaigns
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: campaigns, content, columns
  */
 
-use NonprofitFSE\Assets_Manager;
+use NonProfitFSE\Assets_Manager;
 
 $img02 = Assets_Manager::get_image_url( 'non-profit-02.webp' );
 
 return array(
-	'title'      => __( 'Campaigns', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse' ),
+	'title'      => __( 'Campaigns', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse' ),
 	'keywords'   => array( 'campaigns', 'content', 'columns' ),
 	'content'    => '
 <!-- wp:group {"metadata":{"name":"campaigns"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg-alt","textColor":"ti-fg","layout":{"type":"constrained"}} -->

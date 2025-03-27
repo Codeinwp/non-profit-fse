@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: stats
  * title: stats
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: stats, numbers
  */
 
-use NonprofitFSE\Assets_Manager;
+use NonProfitFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'stats', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse' ),
+	'title'      => __( 'stats', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse' ),
 	'keywords'   => array( 'stats', 'numbers' ),
 	'content'    => '<!-- wp:group {"metadata":{"name":"stats"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-bg-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"var:preset|spacing|30"}}}} -->

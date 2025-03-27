@@ -3,23 +3,23 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: events-2
  * title: Events 2
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: events, features, columns
  */
 
-use NonprofitFSE\Assets_Manager;
+use NonProfitFSE\Assets_Manager;
 
 $img05 = Assets_Manager::get_image_url( 'non-profit-05.webp' );
 $img06 = Assets_Manager::get_image_url( 'non-profit-06.webp' );
 
 return array(
-	'title'      => __( 'Events 2', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse' ),
+	'title'      => __( 'Events 2', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse' ),
 	'keywords'   => array( 'events', 'features', 'columns' ),
 	'content'    => '<!-- wp:group {"metadata":{"name":"events 2"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|60"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"constrained"}} -->

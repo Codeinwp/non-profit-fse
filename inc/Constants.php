@@ -3,21 +3,21 @@
  * Constants class.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Constants
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice' => 'nonprofit-fse-welcome-notice-dismissed',
+		'dismissed-welcome-notice' => 'non-profit-fse-welcome-notice-dismissed',
 	);
 
-	const PRODUCT_KEY = 'nonprofit_fse';
+	const PRODUCT_KEY = 'non_profit_fse';
 }

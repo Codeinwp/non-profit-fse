@@ -14,14 +14,14 @@ jobs:
       - name: Checkout Ref Base
         uses: actions/checkout@v4
         with:
-          path: nonprofit-fse-head
+          path: non-profit-fse-head
       - name: Setup node 14
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - name: FRESH Makepot BASE
         run: |
-          cd nonprofit-fse-head
+          cd non-profit-fse-head
           ls languages/
           composer install --no-dev --prefer-dist --no-progress --no-suggest
           yarn install --frozen-lockfile
@@ -31,10 +31,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: development
-          path: nonprofit-fse-base
+          path: non-profit-fse-base
       - name: FRESH Makepot HEAD
         run: |
-          cd nonprofit-fse-base
+          cd non-profit-fse-base
           ls languages/
           composer install --no-dev --prefer-dist --no-progress --no-suggest
           yarn install --frozen-lockfile
@@ -60,7 +60,7 @@ jobs:
       - name: Run Podiff
         id: translation_status
         run: |
-          ${GITHUB_WORKSPACE}/nonprofit-fse-head/bin/pot-diff.sh ./nonprofit-fse-base/languages/nonprofit-fse.pot ./nonprofit-fse-head/languages/nonprofit-fse.pot $PERCENT_TRESHOLD
+          ${GITHUB_WORKSPACE}/non-profit-fse-head/bin/pot-diff.sh ./non-profit-fse-base/languages/non-profit-fse.pot ./non-profit-fse-head/languages/non-profit-fse.pot $PERCENT_TRESHOLD
       - name: Step require review
         if: steps.translation_status.outputs.has_pot_diff != 'success'
         uses: Automattic/action-required-review@v3

@@ -3,11 +3,11 @@
  * Admin class.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 /**
  * Admin class.
@@ -53,8 +53,8 @@ class Admin {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 
 		add_action( 'activated_plugin', array( $this, 'after_wpfs_activation' ) );
-		add_action( 'wp_ajax_nonprofit_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
-		add_action( 'wp_ajax_nonprofit_fse_set_wpfp_ref', array( $this, 'set_wpfp_ref' ) );
+		add_action( 'wp_ajax_non_profit_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
+		add_action( 'wp_ajax_non_profit_fse_set_wpfp_ref', array( $this, 'set_wpfp_ref' ) );
 	}
 
 	/**
@@ -76,8 +76,8 @@ class Admin {
 			true,
 			array(),
 			array(
-				'nonce'         => wp_create_nonce( 'nonprofit-fse-dismiss-welcome-notice' ),
-				'wpfpRefNonce'  => wp_create_nonce( 'nonprofit-fse-set-wpfp-ref' ),
+				'nonce'         => wp_create_nonce( 'non-profit-fse-dismiss-welcome-notice' ),
+				'wpfpRefNonce'  => wp_create_nonce( 'non-profit-fse-set-wpfp-ref' ),
 				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'wpfpStatus'    => $wpfp_status,
 				'activationUrl' => esc_url(
@@ -93,13 +93,13 @@ class Admin {
 					)
 				),
 				'redirectUrl'   => esc_url( admin_url( 'admin.php?page=wpfs-settings-stripe&onboarding=true' ) ),
-				'activating'    => __( 'Activating', 'nonprofit-fse' ) . '&hellip;',
-				'installing'    => __( 'Installing', 'nonprofit-fse' ) . '&hellip;',
-				'done'          => __( 'Done', 'nonprofit-fse' ),
+				'activating'    => __( 'Activating', 'non-profit-fse' ) . '&hellip;',
+				'installing'    => __( 'Installing', 'non-profit-fse' ) . '&hellip;',
+				'done'          => __( 'Done', 'non-profit-fse' ),
 			)
 		);
 
-		$notice_html  = '<div class="notice notice-info nonprofit-fse-welcome-notice">';
+		$notice_html  = '<div class="notice notice-info non-profit-fse-welcome-notice">';
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
@@ -108,35 +108,35 @@ class Admin {
 		$notice_html .= '<h2 class="notice-subtitle">';
 		$notice_html .= '<span class="dashicons dashicons-star-filled"></span>';
 		/* translators: %s: 🎉 emoji */
-		$notice_html .= sprintf( __( 'Accept Donations on Your Non-Profit Site %s', 'nonprofit-fse' ), '🎉' );
+		$notice_html .= sprintf( __( 'Accept Donations on Your Non-Profit Site %s', 'non-profit-fse' ), '🎉' );
 		$notice_html .= '</h2>';
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: WP Full Pay */
-		$notice_html .= sprintf( __( 'Start Collecting Funds with %s!', 'nonprofit-fse' ), '<span>WP Full Pay</span>' );
+		$notice_html .= sprintf( __( 'Start Collecting Funds with %s!', 'non-profit-fse' ), '<span>WP Full Pay</span>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'The simplest way to accept donations and payments on your WordPress site. Set up in minutes with no technical knowledge required.', 'nonprofit-fse' ) . '</p>';
-		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Quick setup', 'nonprofit-fse' ) . '</strong> - ' . __( 'Connect to Stripe and create your first donation form in minutes', 'nonprofit-fse' ) . '</p>';
-		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Multiple payment options', 'nonprofit-fse' ) . '</strong> - ' . __( 'One-time and recurring donations with customizable amounts', 'nonprofit-fse' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'The simplest way to accept donations and payments on your WordPress site. Set up in minutes with no technical knowledge required.', 'non-profit-fse' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Quick setup', 'non-profit-fse' ) . '</strong> - ' . __( 'Connect to Stripe and create your first donation form in minutes', 'non-profit-fse' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Multiple payment options', 'non-profit-fse' ) . '</strong> - ' . __( 'One-time and recurring donations with customizable amounts', 'non-profit-fse' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
 		/* translators: %s: WP Full Pay */
-		$notice_html .= '<button id="nonprofit-fse-install-wpfp" class="button button-primary button-hero">';
+		$notice_html .= '<button id="non-profit-fse-install-wpfp" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
 		$notice_html .= 'installed' === $wpfp_status ?
 			/* translators: %s: WP Full Pay */
-			sprintf( __( 'Activate %s', 'nonprofit-fse' ), 'WP Full Pay' ) :
+			sprintf( __( 'Activate %s', 'non-profit-fse' ), 'WP Full Pay' ) :
 			/* translators: %s: WP Full Pay */
-			sprintf( __( 'Install & Activate %s', 'nonprofit-fse' ), 'WP Full Pay' );
+			sprintf( __( 'Install & Activate %s', 'non-profit-fse' ), 'WP Full Pay' );
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
 
 		$notice_html .= '<a href="https://wordpress.org/plugins/wp-full-stripe-free/" target="_blank" class="button button-secondary button-hero">';
-		$notice_html .= '<span>' . __( 'Learn More', 'nonprofit-fse' ) . '</span>';
+		$notice_html .= '<span>' . __( 'Learn More', 'non-profit-fse' ) . '</span>';
 		$notice_html .= '<span class="dashicons dashicons-external"></span>';
 		$notice_html .= '</a>';
 
@@ -144,7 +144,7 @@ class Admin {
 
 		$notice_html .= '</div>';
 
-		$notice_html .= '<img class="wpfp-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'WP Full Pay preview', 'nonprofit-fse' ) . '"/>';
+		$notice_html .= '<img class="wpfp-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'WP Full Pay preview', 'non-profit-fse' ) . '"/>';
 		$notice_html .= '</div>';
 		$notice_html .= '</div>';
 
@@ -161,7 +161,7 @@ class Admin {
 		if ( ! isset( $_POST['nonce'] ) ) {
 			return;
 		}
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'nonprofit-fse-dismiss-welcome-notice' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'non-profit-fse-dismiss-welcome-notice' ) ) {
 			return;
 		}
 		update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -217,7 +217,7 @@ class Admin {
 		}
 
 		// Dismiss after one week from activation.
-		$activated_time = get_option( 'nonprofit_fse_install' );
+		$activated_time = get_option( 'non_profit_fse_install' );
 
 		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > WEEK_IN_SECONDS ) {
 			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -269,11 +269,11 @@ class Admin {
 	 * @return void
 	 */
 	public function set_wpfp_ref() {
-		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'nonprofit-fse-set-wpfp-ref' ) ) {
+		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'non-profit-fse-set-wpfp-ref' ) ) {
 			return;
 		}
 
-		update_option( self::WPFP_REF, 'nonprofit-fse' );
+		update_option( self::WPFP_REF, 'non-profit-fse' );
 
 		wp_send_json_success();
 	}

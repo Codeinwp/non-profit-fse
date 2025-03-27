@@ -15,7 +15,7 @@ module.exports = {
 	},
 	functions: {
 		options: {
-			prefix: "NONPROFIT_FSE_VERSION', '",
+			prefix: "NON_PROFIT_FSE_VERSION', '",
 		},
 		src: 'functions.php',
 	},

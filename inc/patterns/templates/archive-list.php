@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: archive-list
  * title: Archive List
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: archive, posts, list
  */
 
 return array(
-	'title'      => __( 'Archive List', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse-layouts' ),
+	'title'      => __( 'Archive List', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse-layouts' ),
 	'keywords'   => array( 'archive', 'posts', 'list' ),
-	'content'    => '<!-- wp:group {"tagName":"main","metadata":{"categories":["nonprofit-fse-layouts"],"patternName":"nonprofit-fse/templates/archive-list","name":"Archive List"},"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->
+	'content'    => '<!-- wp:group {"tagName":"main","metadata":{"categories":["non-profit-fse-layouts"],"patternName":"non-profit-fse/templates/archive-list","name":"Archive List"},"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->
 <main class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"8px"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}},"border":{"bottom":{"color":"var:preset|color|ti-bg-alt","width":"16px"},"top":{},"right":{},"left":{}}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-alt-color has-ti-bg-inv-background-color has-text-color has-background has-link-color" style="border-bottom-color:var(--wp--preset--color--ti-bg-alt);border-bottom-width:16px;margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:query-title {"type":"archive","textAlign":"center","align":"wide"} /--></div>
 <!-- /wp:group -->

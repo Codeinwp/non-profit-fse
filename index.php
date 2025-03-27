@@ -2,5 +2,5 @@
 /**
  * Silence is golden.
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */

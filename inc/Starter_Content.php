@@ -3,16 +3,16 @@
  * Starter content.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Starter Content
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */
 class Starter_Content {
 	const HOME_SLUG = 'home';

@@ -4,16 +4,16 @@
  * This is used to inherit the mods from Neve.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Neve_Mods
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */
 class Neve_Mods {
 

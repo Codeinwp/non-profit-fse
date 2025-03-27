@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: testimonials
  * title: Testimonials
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: Testimonials, review
  */
 
-use NonprofitFSE\Assets_Manager;
+use NonProfitFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Testimonials', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse' ),
+	'title'      => __( 'Testimonials', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse' ),
 	'keywords'   => array( 'Testimonials', 'review' ),
 	'content'    => '<!-- wp:group {"metadata":{"name":"testimonials"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|80"},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg"}}}},"backgroundColor":"ti-bg","textColor":"ti-fg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-ti-fg-color has-ti-bg-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center","fontSize":"huge"} -->

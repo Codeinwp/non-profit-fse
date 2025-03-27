@@ -1,5 +1,5 @@
 {
-  "name": "nonprofit-fse",
+  "name": "non-profit-fse",
   "version": "1.0.0",
   "description": "A lightweight theme for the full site editing WordPress experience.",
   "author": "Themeisle <friends@themeisle.com>",
@@ -7,19 +7,19 @@
   "keywords": [
     "wordpress-theme"
   ],
-  "homepage": "https://github.com/Codeinwp/nonprofit-fse",
+  "homepage": "https://github.com/Codeinwp/non-profit-fse",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Codeinwp/nonprofit-fse"
+    "url": "https://github.com/Codeinwp/non-profit-fse"
   },
   "theme": {
-    "textdomain": "nonprofit-fse"
+    "textdomain": "non-profit-fse"
   },
   "bugs": {
-    "url": "https://github.com/Codeinwp/nonprofit-fse/issues"
+    "url": "https://github.com/Codeinwp/non-profit-fse/issues"
   },
   "pot": {
-    "reportmsgidbugsto": "https://github.com/Codeinwp/nonprofit-fse/issues",
+    "reportmsgidbugsto": "https://github.com/Codeinwp/non-profit-fse/issues",
     "languageteam": "Themeisle Translate <friends@themeisle.com>",
     "lasttranslator": "Themeisle Translate Team <friends@themeisle.com>"
   },

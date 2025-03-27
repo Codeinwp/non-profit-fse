@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  *
  * slug: page-title-2
  * title: Page Title - Dark
- * categories: nonprofit-fse
+ * categories: non-profit-fse
  * keywords: Page Title, Post title, background, inverted, dark
  */
 
 return array(
-	'title'      => __( 'Page Title - Dark', 'nonprofit-fse' ),
-	'categories' => array( 'nonprofit-fse', 'posts' ),
+	'title'      => __( 'Page Title - Dark', 'non-profit-fse' ),
+	'categories' => array( 'non-profit-fse', 'posts' ),
 	'keywords'   => array( 'Page Title', 'Post title', 'background', 'inverted', 'dark' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"8px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-inv","textColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

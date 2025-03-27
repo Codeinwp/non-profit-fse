@@ -15,3 +15,16 @@ Non Profit FSE WordPress theme, Copyright 2025 Themeisle
 Non Profit FSE is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
+
+== Resources ==
+All images are licensed under CC0.
+
+- non-profit-01 https://free-images.com/display/dog_view_funny_sweet.html
+- non-profit-02 https://free-images.com/display/animal_welfare_dog_imprisoned_3.html
+- non-profit-03 https://free-images.com/display/dog_man_love_dogue.html
+- non-profit-04 https://free-images.com/display/yorkie_doberman_woman_dogs.html
+- non-profit-05 https://free-images.com/display/golden_retriever_love_for.html
+- non-profit-06 https://free-images.com/display/dogs_dog_fur_pets.html
+- non-profit-07 https://free-images.com/display/dog_pet_looking_animals.html
+- non-profit-08.webp https://free-images.com/display/dog_paw_pet_playful.html
+- non-profit-09 https://free-images.com/display/dog_animals_pet_cute.html

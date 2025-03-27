@@ -3,16 +3,16 @@
  * Main theme class.
  *
  * @author Themeisle
- * @package nonprofit-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NonprofitFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Core
  *
- * @package nonprofit-fse
+ * @package non-profit-fse
  */
 class Core {
 	/**
@@ -63,7 +63,7 @@ class Core {
 	 * @return void
 	 */
 	public function setup() {
-		load_theme_textdomain( 'nonprofit-fse', NONPROFIT_FSE_DIR . '/languages' );
+		load_theme_textdomain( 'non-profit-fse', NON_PROFIT_FSE_DIR . '/languages' );
 
 		$starter_content = new Starter_Content();
 
@@ -85,7 +85,7 @@ class Core {
 			)
 		);
 
-		register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'nonprofit-fse' ) ) );
+		register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'non-profit-fse' ) ) );
 	}
 
 	/**
