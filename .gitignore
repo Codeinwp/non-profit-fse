@@ -10,7 +10,7 @@ assets/js/build
 *.map
 /vendor/
 
-languages/neve-fse.pot
+languages/non-profit-fse.pot
 
 .DS_Store
 .phpunit.result.cache

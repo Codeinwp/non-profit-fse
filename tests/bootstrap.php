@@ -2,10 +2,10 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package neve-fse
+ * @package non-profit-fse
  */
 
-define( 'NEVE_FSE_IGNORE_SOURCE_CHECK', true );
+define( 'NON_PROFIT_FSE_IGNORE_SOURCE_CHECK', true );
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 

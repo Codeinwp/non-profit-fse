@@ -3,16 +3,16 @@
  * Block Styles Handler.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Block_Styles
  *
- * @package neve-fse
+ * @package non-profit-fse
  */
 class Block_Styles {
 	/**

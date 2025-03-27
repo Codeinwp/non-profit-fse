@@ -3,18 +3,18 @@
  * Patterns Handler.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace NonProfitFSE;
 
 use WP_Block_Pattern_Categories_Registry;
 
 /**
  * Class Block_Patterns
  *
- * @package neve-fse
+ * @package non-profit-fse
  */
 class Block_Patterns {
 
@@ -59,13 +59,13 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'neve-fse'         => array(
-				'label'       => __( 'Neve FSE Patterns', 'neve-fse' ),
-				'description' => __( 'Patterns for several sections and components', 'neve-fse' ),
+			'non-profit-fse'         => array(
+				'label'       => __( 'Non Profit FSE Patterns', 'non-profit-fse' ),
+				'description' => __( 'Patterns for several sections and components', 'non-profit-fse' ),
 			),
-			'neve-fse-layouts' => array(
-				'label'       => __( 'Neve FSE Layouts', 'neve-fse' ),
-				'description' => __( 'Full-page layouts that can be used as templates', 'neve-fse' ),
+			'non-profit-fse-layouts' => array(
+				'label'       => __( 'Non Profit FSE Layouts', 'non-profit-fse' ),
+				'description' => __( 'Full-page layouts that can be used as templates', 'non-profit-fse' ),
 			),
 		);
 
@@ -77,54 +77,36 @@ class Block_Patterns {
 			'templates/archive-list',
 
 			// layout patterns.
-			'layout/cta-dark',
-			'layout/full-width-columns-content-image',
-			'layout/full-width-quote',
-			'layout/page-cover-bg-image',
-			'layout/page-cover-with-buttons',
-			'layout/content-with-images',
-			'layout/team-members-columns',
-			'layout/columns-with-services',
-			'layout/pricing-columns',
-			'layout/columns-with-icons',
-			'layout/boxed-features-1',
-			'layout/boxed-features-2',
-			'layout/columns-with-cards',
-			'layout/columns-content-images',
-			'layout/columns-testimonials',
-			'layout/columns-text-image',
-			'layout/columns-image-and-text',
-			'layout/portfolio-columns',
-			'layout/columns-image-and-text-inv',
-			'layout/hero-with-feature-columns',
-			'layout/columns-testimonials-inv',
-			'layout/columns-with-services-text',
-			'layout/contact-section',
-			'layout/hero-with-text',
-			'layout/map-section',
-			'layout/faq-section',
+			'layout/404',
+			'layout/campaign',
+			'layout/content',
+			'layout/content-2',
+			'layout/content-3',
+			'layout/content-4',
+			'layout/CTA',
+			'layout/events',
+			'layout/events-2',
+			'layout/faq',
+			'layout/features',
+			'layout/features-2',
+			'layout/hero',
+			'layout/stats',
+			'layout/testimonials',
+			'layout/testimonials-2',
 
 			// Post patterns.
 			'loops/post-loop-1',
 			'loops/post-loop-2',
-			'loops/post-loop-3',
-			'loops/post-loop-4',
-			'loops/post-loop-5',
-			'loops/post-loop-6',
-			'loops/post-loop-7',
-			'loops/post-loop-8',
-			'loops/post-loop-9',
 
 			// Page title patterns.
 			'page_titles/page-title-1',
 			'page_titles/page-title-2',
 			'page_titles/page-title-3',
 			'page_titles/page-title-4',
-			'page_titles/page-title-5',
 		);
 
-		$this->categories = apply_filters( 'neve_fse_block_patterns_categories', $categories );
-		$this->patterns   = apply_filters( 'neve_fse_block_patterns', $patterns );
+		$this->categories = apply_filters( 'non_profit_fse_block_patterns_categories', $categories );
+		$this->patterns   = apply_filters( 'non_profit_fse_block_patterns', $patterns );
 	}
 
 	/**
@@ -149,13 +131,13 @@ class Block_Patterns {
 	 */
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
-			$file = NEVE_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
+			$file = NON_PROFIT_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
 
 			if ( ! is_file( $file ) ) {
 				continue;
 			}
 
-			register_block_pattern( 'neve-fse/' . $pattern, require $file );
+			register_block_pattern( 'non-profit-fse/' . $pattern, require $file );
 		}
 	}
 }

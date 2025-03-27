@@ -1,25 +1,25 @@
 {
-  "name": "neve-fse",
-  "version": "1.1.2",
+  "name": "non-profit-fse",
+  "version": "1.0.0",
   "description": "A lightweight theme for the full site editing WordPress experience.",
   "author": "Themeisle <friends@themeisle.com>",
   "license": "GPL-2.0-or-later",
   "keywords": [
     "wordpress-theme"
   ],
-  "homepage": "https://github.com/Codeinwp/neve-fse",
+  "homepage": "https://github.com/Codeinwp/non-profit-fse",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Codeinwp/neve-fse"
+    "url": "https://github.com/Codeinwp/non-profit-fse"
   },
   "theme": {
-    "textdomain": "neve-fse"
+    "textdomain": "non-profit-fse"
   },
   "bugs": {
-    "url": "https://github.com/Codeinwp/neve-fse/issues"
+    "url": "https://github.com/Codeinwp/non-profit-fse/issues"
   },
   "pot": {
-    "reportmsgidbugsto": "https://github.com/Codeinwp/neve-fse/issues",
+    "reportmsgidbugsto": "https://github.com/Codeinwp/non-profit-fse/issues",
     "languageteam": "Themeisle Translate <friends@themeisle.com>",
     "lasttranslator": "Themeisle Translate Team <friends@themeisle.com>"
   },

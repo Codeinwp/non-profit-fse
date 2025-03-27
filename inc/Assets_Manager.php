@@ -3,24 +3,22 @@
  * Assets manager class.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Assets_Manager
  *
- * @package neve-fse
+ * @package non-profit-fse
  */
 class Assets_Manager {
 	const ASSETS_SLUGS = array(
-		'frontend-css'       => 'neve-fse-style',
-		'editor-css'         => 'neve-fse-editor',
-		'welcome-notice'     => 'neve-fse-welcome-notice',
-		'general-notice'     => 'neve-fse-general-notice',
-		'design-pack-notice' => 'neve-fse-design-pack-notice',
+		'frontend-css'   => 'non-profit-fse-style',
+		'editor-css'     => 'non-profit-fse-editor',
+		'welcome-notice' => 'non-profit-fse-welcome-notice',
 	);
 
 	const AVAILABLE_THEME_FONTS = array(
@@ -47,9 +45,9 @@ class Assets_Manager {
 	 * @return void
 	 */
 	public static function enqueue_style( string $handle, string $file, array $dependencies = array() ) {
-		$uri = NEVE_FSE_URL . 'assets/css/build/' . $file . '.css';
+		$uri = NON_PROFIT_FSE_URL . 'assets/css/build/' . $file . '.css';
 
-		wp_register_style( $handle, esc_url( $uri ), $dependencies, NEVE_FSE_VERSION );
+		wp_register_style( $handle, esc_url( $uri ), $dependencies, NON_PROFIT_FSE_VERSION );
 		wp_style_add_data( $handle, 'rtl', 'replace' );
 		wp_enqueue_style( $handle );
 
@@ -72,13 +70,13 @@ class Assets_Manager {
 	 *
 	 * @return void
 	 */
-	public static function enqueue_script( string $handle, string $file, bool $in_footer = true, array $dependencies = array(), array $localization = array(), $localization_object_name = 'neveFSEData' ) {
-		$uri = NEVE_FSE_URL . 'assets/js/build/' . $file . '.js';
-		$php = NEVE_FSE_DIR . 'assets/js/build/' . $file . '.asset.php';
+	public static function enqueue_script( string $handle, string $file, bool $in_footer = true, array $dependencies = array(), array $localization = array(), $localization_object_name = 'nonProfitFSEData' ) {
+		$uri = NON_PROFIT_FSE_URL . 'assets/js/build/' . $file . '.js';
+		$php = NON_PROFIT_FSE_DIR . 'assets/js/build/' . $file . '.asset.php';
 
 		$deps = is_file( $php ) ? include $php : array(
 			'dependencies' => array(),
-			'version'      => NEVE_FSE_VERSION,
+			'version'      => NON_PROFIT_FSE_VERSION,
 		);
 
 
@@ -93,7 +91,7 @@ class Assets_Manager {
 		}
 
 		wp_enqueue_script( $handle );
-		wp_set_script_translations( $handle, 'neve-fse' );
+		wp_set_script_translations( $handle, 'non-profit-fse' );
 	}
 
 	/**
@@ -104,7 +102,7 @@ class Assets_Manager {
 	 * @return string
 	 */
 	public static function get_image_url( string $file ): string {
-		return NEVE_FSE_URL . 'assets/img/' . $file;
+		return NON_PROFIT_FSE_URL . 'assets/img/' . $file;
 	}
 
 

@@ -1,31 +1,63 @@
 @custom-media --tablet (max-width: 769px);
 @custom-media --desktop (max-width: 1200px);
 
-.neve-fse-welcome-notice {
+.non-profit-fse-welcome-notice {
 	position: relative;
 	padding-bottom: 0;
 
 	.notice-content {
-		display: flex;
-		width: 100%;
+		display: grid;
 		gap: 20px;
+		width: 100%;
+		grid-template-columns: auto auto;
+		justify-content: center;
 
-		@media (--desktop) {
-			flex-direction: column-reverse;
+		@media (--tablet) {
 			text-align: center;
-			gap: 0;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			align-items: center;
 		}
 	}
 
 	.notice-copy {
-		padding: 30px 0;
+		padding: 36px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 
-		@media (--desktop) {
+		.description {
+			display: flex;
+			align-items: center;
+		}
+
+		.dashicons-yes {
+			color: #5469d4;
+		}
+
+		@media (--tablet) {
 			padding: 20px 0;
 			align-items: center;
+		}
+	}
+
+	.notice-subtitle {
+		margin: 0;
+		font-weight: 400;
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		.dashicons {
+			background: #5469d4;
+			color: #fff;
+			padding: 10px;
+			border-radius: 100%;
+			width: 12px;
+			height: 12px;
+			font-size: 12px;
 		}
 	}
 
@@ -34,19 +66,22 @@
 
 		span {
 			font-weight: 600;
-			color: #e57451;
+			color: #5469d4;
 		}
 	}
 
 	.actions {
 		display: flex;
-		margin-top: 40px;
+		margin-top: 24px;
 		gap: 20px;
 		align-items: center;
 		flex-wrap: wrap;
 
+		.button-primary {
+			background: #5469d4;
+		}
 
-		@media (--desktop) {
+		@media (--tablet) {
 			margin-top: 20px;
 			gap: 10px;
 			justify-content: center;
@@ -77,21 +112,20 @@
 	}
 
 
-	.otter-preview {
-		flex-shrink: 1;
-		width: auto;
-		align-self: flex-end;
-		display: block;
+	.wpfp-preview {
 		max-height: 300px;
-		max-width: 60%;
+		width: auto;
+		justify-self: center;
+		padding-top: 24px;
 
-		@media (--desktop) {
-			max-width: 80%;
-			margin: 0 auto;
+		@media (--tablet) {
+			width: auto;
+			height: auto;
+			max-width: 300px;
 		}
 	}
 
-	.otter-logo {
+	.wpfp-logo {
 		bottom: 30px;
 		right: 30px;
 		opacity: 0.75;
@@ -99,38 +133,3 @@
 		//position: absolute;
 	}
 }
-
-.neve-fse-survey-notice {
-
-	.notice-content {
-		display: flex;
-		gap: 12px;
-		align-items: flex-start;
-
-		.neve-fse-logo {
-			width: 64px;
-			min-width: 64px;
-			margin-top: 12px;
-		}
-
-		.description {
-			font-size: 15px;
-			line-height: 1.6;
-			margin-bottom: 12px;
-		}
-
-		.notice-copy .actions {
-			display: flex;
-			gap: 12px;
-			margin-bottom: 12px;
-
-			.button-hero {
-
-				.dashicons-external {
-					line-height: 42px;
-				}
-			}
-		}
-	}
-}
-

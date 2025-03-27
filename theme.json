@@ -40,7 +40,7 @@
       "palette": [
         {
           "slug": "ti-bg",
-          "color": "var(--nv-site-bg, #FFFFFF)",
+          "color": "var(--nv-site-bg, #FBFBFB)",
           "name": "Background"
         },
         {
@@ -50,22 +50,22 @@
         },
         {
           "slug": "ti-accent",
-          "color": "var(--nv-primary-accent, #325ce8)",
+          "color": "var(--nv-primary-accent, #246430)",
           "name": "Accent"
         },
         {
           "slug": "ti-accent-secondary",
-          "color": "var(--nv-secondary-accent, #1B47DA)",
+          "color": "var(--nv-secondary-accent, #FED42B)",
           "name": "Accent Secondary"
         },
         {
           "slug": "ti-bg-inv",
-          "color": "var(--nv-dark-bg, #1A1919)",
+          "color": "var(--nv-dark-bg, #243527)",
           "name": "Background Dark"
         },
         {
           "slug": "ti-bg-alt",
-          "color": "var(--nv-light-bg, #f7f7f3)",
+          "color": "var(--nv-light-bg, #F2F0EF)",
           "name": "Background Alt"
         },
         {
@@ -398,7 +398,7 @@
       ]
     },
     "layout": {
-      "contentSize": "740px",
+      "contentSize": "960px",
       "wideSize": "1140px"
     },
     "border": {
@@ -415,14 +415,14 @@
     },
     "typography": {
       "fontSize": "var(--neve-font-size-body, var(--wp--preset--font-size--normal))",
-      "fontFamily": "var(--neve-font-family-heading, var( --wp--preset--font-family--inter, '\"Inter\", sans-serif'))",
+      "fontFamily": "var(--neve-font-family-heading, var( --wp--preset--font-family--outfit, '\"Outfit\", sans-serif'))",
       "fontWeight": "var(--neve-font-weight-body, 400)",
       "lineHeight": "var(--neve-font-line-height-body, 1.7)"
     },
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var(--neve-font-family-heading, var( --wp--preset--font-family--inter, '\"Inter\", sans-serif'))",
+          "fontFamily": "var(--neve-font-family-heading, var( --wp--preset--font-family--outfit, '\"Outfit\", sans-serif'))",
           "fontWeight": "var(--neve-font-weight-heading, 600)",
           "lineHeight": "var(--neve-font-line-height-heading, 1.3)",
           "fontSize": "var(--neve-font-size-heading, var(--wp--preset--font-size--huge))"

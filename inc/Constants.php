@@ -3,23 +3,21 @@
  * Constants class.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package non-profit-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace NonProfitFSE;
 
 /**
  * Class Constants
  *
- * @package neve-fse
+ * @package non-profit-fse
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice'         => 'neve-fse-welcome-notice-dismissed',
-		'dismissed-survey-notice'          => 'neve-fse-survey-notice-dismissed',
-		'dismissed-fse-design-pack-notice' => 'neve-fse-design-pack-dismissed',
+		'dismissed-welcome-notice' => 'non-profit-fse-welcome-notice-dismissed',
 	);
 
-	const PRODUCT_KEY = 'neve_fse';
+	const PRODUCT_KEY = 'non_profit_fse';
 }
