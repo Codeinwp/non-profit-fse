@@ -20,7 +20,7 @@ return array(
 	'title'      => __( '404', 'non-profit-fse' ),
 	'categories' => array( 'non-profit-fse' ),
 	'keywords'   => array( 'content' ),
-    'inserter'   => false,
+	'inserter'   => false,
 	'content'    => '
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}},"backgroundColor":"ti-bg-inv"} -->
 <main class="wp-block-group has-ti-bg-inv-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"' . esc_url( $img09 ) . '","id":214,"dimRatio":80,"overlayColor":"ti-bg-inv","isUserOverlayColor":true,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
