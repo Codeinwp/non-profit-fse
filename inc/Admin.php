@@ -55,6 +55,9 @@ class Admin {
 		add_action( 'activated_plugin', array( $this, 'after_wpfs_activation' ) );
 		add_action( 'wp_ajax_non_profit_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
 		add_action( 'wp_ajax_non_profit_fse_set_wpfp_ref', array( $this, 'set_wpfp_ref' ) );
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
+		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
 	}
 
 	/**
@@ -276,5 +279,47 @@ class Admin {
 		update_option( self::WPFP_REF, 'non-profit-fse' );
 
 		wp_send_json_success();
+	}
+
+	/**
+	 * Add Black Friday data.
+	 *
+	 * @param array $configs The configuration array for the loaded products.
+	 *
+	 * @return array
+	 */
+	public function add_black_friday_data( $configs ) {
+		$config = $configs['default'];
+
+		// translators: %1$s - plugin name, %2$s - HTML tag, %3$s - discount.
+		$message_template = __( 'Need to accept payments or donations? Try %1$s, built by the same team as your theme — now up to %2$s OFF, for a limited time only.', 'non-profit-fse' );
+
+		$config['dismiss']  = true; // Note: Allow dismiss since it appears on `/wp-admin`.
+		$config['message']  = sprintf( $message_template, 'WP Full Pay', '70%' );
+		$config['sale_url'] = add_query_arg(
+			array(
+				'utm_term' => 'free',
+			),
+			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/wpfp-bf', 'bfcm', 'non-profit-fse' ) )
+		);
+
+		$configs[ NON_PROFIT_FSE_PRODUCT_SLUG ] = $config;
+
+		return $configs;
+	}
+
+	/**
+	 * Register internal pages.
+	 *
+	 * @return void
+	 */
+	public function register_internal_page() {
+		$screen = get_current_screen();
+		
+		if ( ( 'dashboard' !== $screen->id && 'themes' !== $screen->id ) ) {
+			return;
+		}
+		
+		do_action( 'themeisle_internal_page', NON_PROFIT_FSE_PRODUCT_SLUG, $screen->id );
 	}
 }
