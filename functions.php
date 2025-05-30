@@ -67,7 +67,7 @@ function check_php() {
  * @return void
  */
 function define_constants() {
-	define( 'NON_PROFIT_FSE_VERSION', '1.0.1' );
+	define( 'NON_PROFIT_FSE_VERSION', '1.0.2' );
 	define( 'NON_PROFIT_FSE_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
 	define( 'NON_PROFIT_FSE_DIR', trailingslashit( get_template_directory() ) );
 	define( 'NON_PROFIT_FSE_URL', trailingslashit( get_template_directory_uri() ) );
