@@ -69,6 +69,11 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	width: unset;
 }
 
+.wp-site-blocks .wp-block-cover.alignfull {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
 /**
  * Override button outline paddings because they
  * can NOT be changed from the theme.json.
