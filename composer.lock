@@ -8,21 +8,21 @@
     "packages": [
         {
             "name": "codeinwp/themeisle-sdk",
-            "version": "3.3.46",
+            "version": "3.3.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeinwp/themeisle-sdk.git",
-                "reference": "af2e7360bbe3af6a1bd2c3779fc33b7765104461"
+                "reference": "d6807c0b7308e323bd77cced667dee3f2d5e6a82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/af2e7360bbe3af6a1bd2c3779fc33b7765104461",
-                "reference": "af2e7360bbe3af6a1bd2c3779fc33b7765104461",
+                "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/d6807c0b7308e323bd77cced667dee3f2d5e6a82",
+                "reference": "d6807c0b7308e323bd77cced667dee3f2d5e6a82",
                 "shasum": ""
             },
             "require-dev": {
                 "codeinwp/phpcs-ruleset": "dev-main",
-                "yoast/phpunit-polyfills": "^2.0"
+                "yoast/phpunit-polyfills": "^4.0"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -36,16 +36,16 @@
                     "homepage": "https://themeisle.com"
                 }
             ],
-            "description": "ThemeIsle SDK",
+            "description": "Themeisle SDK library.",
             "homepage": "https://github.com/Codeinwp/themeisle-sdk",
             "keywords": [
                 "wordpress"
             ],
             "support": {
                 "issues": "https://github.com/Codeinwp/themeisle-sdk/issues",
-                "source": "https://github.com/Codeinwp/themeisle-sdk/tree/v3.3.46"
+                "source": "https://github.com/Codeinwp/themeisle-sdk/tree/v3.3.58"
             },
-            "time": "2025-05-16T15:38:02+00:00"
+            "time": "2026-07-29T08:38:52+00:00"
         }
     ],
     "packages-dev": [
@@ -2415,5 +2415,5 @@
     "platform-overrides": {
         "php": "7.0"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
