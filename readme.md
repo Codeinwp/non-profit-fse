@@ -16,6 +16,13 @@ Non Profit FSE is distributed under the terms of the GNU GPLv2 or later
 
 ## Changelog ##
 
+##### [Version 1.0.3](https://github.com/Codeinwp/non-profit-fse/compare/v1.0.2...v1.0.3) (2026-08-12)
+
+- Fixed an issue where the full-width banner on the main page would overflow the edges of the screen.
+
+
+
+
 ##### [Version 1.0.2](https://github.com/Codeinwp/non-profit-fse/compare/v1.0.1...v1.0.2) (2025-05-30)
 
 - Updated dependencies
