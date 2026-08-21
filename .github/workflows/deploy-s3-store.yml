@@ -32,6 +32,8 @@ jobs:
           yarn run dist
       - name: Install Subversion
         run: sudo apt-get update && sudo apt-get install -y subversion
+      - name: Generate file checksums
+        uses: Codeinwp/action-release-checksums@main
       - name: Upload Latest Version to S3
         uses: jakejarvis/s3-sync-action@master
         with:
