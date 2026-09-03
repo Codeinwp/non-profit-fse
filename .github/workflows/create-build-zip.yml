@@ -76,8 +76,9 @@ jobs:
         id: find-comment
         uses: peter-evans/find-comment@v1
         with:
+          token: ${{ secrets.BOT_TOKEN }}
           issue-number: ${{ steps.get-pr-number.outputs.num }}
-          comment-author: github-actions[bot]
+          comment-author: pirate-bot
           body-includes: Download NonProfitFSE
 
       - name: Get comment body
@@ -91,6 +92,7 @@ jobs:
         if: ${{ steps.find-comment.outputs.comment-id == '' }}
         uses: peter-evans/create-or-update-comment@v1
         with:
+          token: ${{ secrets.BOT_TOKEN }}
           issue-number: ${{ steps.get-pr-number.outputs.num }}
           body: ${{ steps.get-comment-body.outputs.body }}
 
@@ -98,6 +100,7 @@ jobs:
         if: ${{ steps.find-comment.outputs.comment-id != '' }}
         uses: peter-evans/create-or-update-comment@v1
         with:
+          token: ${{ secrets.BOT_TOKEN }}
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           edit-mode: replace
           body: ${{ steps.get-comment-body.outputs.body }}
