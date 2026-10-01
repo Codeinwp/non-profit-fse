@@ -58,6 +58,7 @@ class Admin {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
+		add_filter( 'non_profit_fse_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
 	}
 
 	/**
@@ -306,6 +307,27 @@ class Admin {
 		$configs[ NON_PROFIT_FSE_PRODUCT_SLUG ] = $config;
 
 		return $configs;
+	}
+
+	/**
+	 * Get the data for the SDK "Connect your AI agent" module.
+	 *
+	 * @return array<string, string|string[]>
+	 */
+	public function get_ai_connect_metadata() {
+		return array(
+			'name'         => 'Non-Profit FSE',
+			'notice_cases' => array(
+				__( 'change your site\'s style', 'non-profit-fse' ),
+				__( 'put a donate button in your header', 'non-profit-fse' ),
+				__( 'add a campaign section to any page', 'non-profit-fse' ),
+			),
+			'prompts'      => array(
+				__( 'Add a Donate button to the right of my header menu, linking to /donate.', 'non-profit-fse' ),
+				__( 'Switch my site to the Non-Profit FSE style variation with the green palette.', 'non-profit-fse' ),
+				__( 'Insert a campaign progress pattern from my theme at the top of the Get Involved page.', 'non-profit-fse' ),
+			),
+		);
 	}
 
 	/**
