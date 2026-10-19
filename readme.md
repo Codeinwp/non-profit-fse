@@ -16,6 +16,14 @@ Non Profit FSE is distributed under the terms of the GNU GPLv2 or later
 
 ## Changelog ##
 
+##### [Version 1.0.4](https://github.com/Codeinwp/non-profit-fse/compare/v1.0.3...v1.0.4) (2026-10-19)
+
+- Updated dependencies
+- Added AI agent support: connect your AI assistant and ask it to edit your sites header, footer and style.
+
+
+
+
 ##### [Version 1.0.3](https://github.com/Codeinwp/non-profit-fse/compare/v1.0.2...v1.0.3) (2026-08-12)
 
 - Fixed an issue where the full-width banner on the main page would overflow the edges of the screen.
