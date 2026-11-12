@@ -54,7 +54,7 @@ class Assets_Manager {
 		// Add the inherited values from Neve.
 		$inherited_style_values = self::get_inherited_style_values();
 		if ( ! empty( $inherited_style_values ) ) {
-			wp_add_inline_style( $handle, $inherited_style_values );
+			wp_add_inline_style( $handle, wp_strip_all_tags( $inherited_style_values ) );
 		}
 	}
 
