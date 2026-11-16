@@ -16,6 +16,14 @@ Non Profit FSE is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
 
+##### [Version 1.0.5](https://github.com/Codeinwp/non-profit-fse/compare/v1.0.4...v1.0.5) (2026-11-16)
+
+- Enhanced security
+- Updated dependencies
+
+
+
+
 ##### [Version 1.0.4](https://github.com/Codeinwp/non-profit-fse/compare/v1.0.3...v1.0.4) (2026-10-19)
 
 - Updated dependencies
