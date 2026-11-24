@@ -59,6 +59,7 @@ class Admin {
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
 		add_filter( 'non_profit_fse_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
+		add_filter( 'non_profit_fse_support_hub_metadata', array( $this, 'get_support_hub_metadata' ) );
 	}
 
 	/**
@@ -329,6 +330,26 @@ class Admin {
 				__( 'Add a Donate button to the right of my header menu, linking to /donate.', 'non-profit-fse' ),
 				__( 'Switch my site to the Non-Profit FSE style variation with the green palette.', 'non-profit-fse' ),
 				__( 'Insert a campaign progress pattern from my theme at the top of the Get Involved page.', 'non-profit-fse' ),
+			),
+		);
+	}
+
+	/**
+	 * Metadata for the Themeisle SDK Support Hub: the footer links shown in the Help form.
+	 *
+	 * Non-Profit FSE is a free theme with no Pro tier, so is_pro is always false.
+	 *
+	 * @return array{is_pro: bool, links: array<int, array{icon: string, text: string, url: string}>}
+	 */
+	public function get_support_hub_metadata() {
+		return array(
+			'is_pro' => false,
+			'links'  => array(
+				array(
+					'icon' => 'groups',
+					'text' => __( 'Community Forum', 'non-profit-fse' ),
+					'url'  => 'https://wordpress.org/support/theme/non-profit-fse/',
+				),
 			),
 		);
 	}
